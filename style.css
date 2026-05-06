@@ -5,7 +5,7 @@
 
 .sidebar {
     flex: 1 0 40%; /* Sidebar takes about 40% of the width */
-    background-image: url('your-image.jpg');
+    background-image: url('C:/repos/sign-up-form/sideIMG.jpg');
     background-size: cover;
     position: relative;
     display: flex;

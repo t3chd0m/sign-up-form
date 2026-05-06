@@ -50,4 +50,67 @@ input:invalid {
     flex-direction: column;
     justify-content: center; /* Centers the form vertically */
     background-color: #fff;
+    padding-left: 50px; /* Gives the form some room from the sidebar */
+}
+
+.form-container {
+    padding: 20px 40px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.form-row {
+    display: flex;
+    gap: 40px; /* Space between the two inputs */
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column; /* Stack label over input */
+    flex: 1; /* Makes both inputs in a row equal width */
+}
+
+label {
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+input {
+    border: 1px solid #E5E7EB;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+button[type="submit"] {
+    background-color: #596D48;
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: #4a5a3c; /* Slightly darker on hover */
+}
+
+/* Blue border and shadow when the user clicks inside */
+input:focus {
+    outline: none;
+    border: 2px solid #2563EB; /* A nice blue */
+    box-shadow: 0 0 5px rgba(37, 99, 235, 0.3);
+}
+
+/* Red border if the input is invalid (like an empty required field) */
+/* The :not(:placeholder-shown) ensures it doesn't stay red before the user types */
+input:invalid:not(:placeholder-shown) {
+    border: 2px solid #ef4444;
 }

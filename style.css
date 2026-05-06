@@ -13,11 +13,10 @@ body, html {
 
 /* Sidebar Styling */
 .sidebar {
-    flex: 1 0 40%;
-    /* Using relative path so it works on GitHub */
+    flex: 1 0 30%;
     background-image: url('sideIMG.jpg'); 
     background-size: cover;
-    background-position: center;
+    background-position: top center;
     height: 100vh;
 }
 

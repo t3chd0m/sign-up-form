@@ -33,9 +33,13 @@ input:invalid {
 }
 
 .sidebar {
-    flex: 2; /* Sidebar takes 2/5 of the space */
-    background-color: #333; /* Placeholder until you add the image */
+    flex: 1 0 40%;
+    background-image: url('sideIMG.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
 }
+
 
 .content {
     flex: 3; /* Content takes 3/5 of the space */

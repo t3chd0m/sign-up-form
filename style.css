@@ -1,113 +1,115 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
 .main-container {
     display: flex;
     height: 100vh;
 }
 
+/* Sidebar Styling */
 .sidebar {
     flex: 1 0 40%;
-    /* Use ONLY the filename, no C: drive info */
-    background-image: url('sideIMG.jpg') alt=""; 
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    display: flex;
-    align-items: center;
-    height: 100vh; /* Ensure the sidebar is full height */
-}
-
-
-/* Pseudo-classes from the instructions */
-input:focus {
-    border: 2px solid blue;
-    box-shadow: 2px 2px 5px rgba(0,0,255,0.2);
-    outline: none;
-}
-
-input:invalid {
-    border: 2px solid red;
-}
-
-.main-container {
-    display: flex;
-    height: 100vh; /* Takes full screen height */
-}
-
-.sidebar {
-    flex: 1 0 40%;
+    /* Using relative path so it works on GitHub */
     background-image: url('sideIMG.jpg'); 
     background-size: cover;
     background-position: center;
     height: 100vh;
 }
 
-
+/* Content Styling */
 .content {
-    flex: 3; /* Content takes 3/5 of the space */
+    flex: 1 0 60%;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centers the form vertically */
-    background-color: #fff;
-    padding-left: 50px; /* Gives the form some room from the sidebar */
+    justify-content: center;
+    background-color: #f9f9f9;
+}
+
+.header-text {
+    padding: 40px 60px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-color: white;
 }
 
 .form-container {
-    padding: 20px 40px;
+    padding: 40px 60px;
     background-color: white;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+    margin: 20px 0;
+}
+
+.form-container h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
 }
 
 .form-row {
     display: flex;
-    gap: 40px; /* Space between the two inputs */
+    gap: 40px;
     margin-bottom: 20px;
 }
 
 .input-group {
     display: flex;
-    flex-direction: column; /* Stack label over input */
-    flex: 1; /* Makes both inputs in a row equal width */
+    flex-direction: column;
+    flex: 1;
 }
 
 label {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     font-weight: bold;
     letter-spacing: 1px;
-    color: #444;
     margin-bottom: 5px;
+    color: #555;
 }
 
 input {
+    padding: 10px;
     border: 1px solid #E5E7EB;
     border-radius: 4px;
-    padding: 8px;
+    font-size: 1rem;
 }
 
-button[type="submit"] {
+/* Validation Styling */
+input:focus {
+    outline: none;
+    border: 2px solid #2563EB;
+    box-shadow: 0 0 5px rgba(37, 99, 235, 0.2);
+}
+
+input:invalid:not(:placeholder-shown) {
+    border: 2px solid #ef4444;
+}
+
+/* Footer & Button Styling */
+.footer-area {
+    padding: 20px 60px;
+}
+
+button {
     background-color: #596D48;
     color: white;
-    padding: 15px 40px;
+    padding: 15px 50px;
     border: none;
     border-radius: 8px;
+    font-size: 1.1rem;
     font-weight: bold;
-    font-size: 1rem;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: background-color 0.2s;
 }
 
-button[type="submit"]:hover {
-    background-color: #4a5a3c; /* Slightly darker on hover */
+button:hover {
+    background-color: #4a5a3c;
 }
 
-/* Blue border and shadow when the user clicks inside */
-input:focus {
-    outline: none;
-    border: 2px solid #2563EB; /* A nice blue */
-    box-shadow: 0 0 5px rgba(37, 99, 235, 0.3);
-}
-
-/* Red border if the input is invalid (like an empty required field) */
-/* The :not(:placeholder-shown) ensures it doesn't stay red before the user types */
-input:invalid:not(:placeholder-shown) {
-    border: 2px solid #ef4444;
+.footer-area a {
+    color: #596D48;
+    text-decoration: none;
+    font-weight: bold;
 }

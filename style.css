@@ -4,12 +4,15 @@
 }
 
 .sidebar {
-    flex: 1 0 40%; /* Sidebar takes about 40% of the width */
-    background-image: url('C:/repos/sign-up-form/sideIMG.jpg');
+    flex: 1 0 40%;
+    /* Use ONLY the filename, no C: drive info */
+    background-image: url('sideIMG.jpg'); 
     background-size: cover;
+    background-position: center;
     position: relative;
     display: flex;
-    align-items: center; /* Centers the logo vertically */
+    align-items: center;
+    height: 100vh; /* Ensure the sidebar is full height */
 }
 
 .logo-container {
